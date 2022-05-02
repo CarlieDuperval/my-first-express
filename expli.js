@@ -27,3 +27,6 @@ app.get('/hello/:person', (request, response) => {           //to put person as 
 
 
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}...`))
+
+// to do a POST, PATCH, PUT, DELETE you need to use Postman
+// postman allows us to 
