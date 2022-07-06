@@ -1,5 +1,5 @@
 import express from "express"; //import express library
-import {hello, helloPerson, greetNewPerson} from './src/hello.js';
+import {hello, helloPerson, greetNewPerson,Greeting} from './src/hello.js';
 import { welcomeHome } from './src/welcome.js';
 import { response } from "express";  // auto import
 import { request } from "express";  // auto import 
@@ -14,9 +14,8 @@ app.use(express.json());
 app.get('/hello', hello)
 app.post('/hello', greetNewPerson);
 
-app.get('/', (request, response) => {
-    response.send("These are not the droids you're looking for.");
-})
+app.get('/greeting', Greeting);
+
 //below  person is a param that gets attached to the response
 app.get('/hello/:person', helloPerson)
 

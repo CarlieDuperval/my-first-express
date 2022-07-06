@@ -15,5 +15,9 @@ export const helloPerson = (request, response) => {
 export const greetNewPerson = (request, response) => {
     const {firstName , lastName} = request.body;
     response.send(`Hello there, ${firstName} ${lastName}.`)
-    
+
+}
+
+export const Greeting = (request, response) => {
+    response.send("These are not the droids you're looking for.")
 }
